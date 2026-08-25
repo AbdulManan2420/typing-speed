@@ -1,0 +1,14 @@
+<% layout('layout') -%>
+
+<div class="hero">
+  <h1>Welcome to TypeBolt</h1>
+  <p>Test and improve your typing speed</p>
+  <div class="actions">
+    <% if (user) { %>
+      <a href="/users/dashboard" class="btn">Go to Dashboard</a>
+    <% } else { %>
+      <a href="/auth/register" class="btn">Get Started</a>
+      <a href="/auth/login" class="btn btn-outline">Login</a>
+    <% } %>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.header {
+    background-color: rgb(78, 75, 75);
+    padding: 15px 0; /* left/right ka padding remove kar ke mDiv me add karenge */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.mDiv {
+    padding: 0 12px; /* left/right thoda andar */
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px; /* pehle 1280 thi, ab thoda narrow */
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+}
+
+.logoPic {
+    background-color: yellow;
+    color: #1e1e2f;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.logoName {
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.navigationIcons {
+    display: flex;
+    gap: 20px;
+}
+
+.navigationIcons span {
+    color: #dddddd;
+    font-size: 16px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navigationIcons span:hover {
+    color: yellow;
+    transform: translateY(-1px);
+}

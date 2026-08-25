@@ -1,0 +1,12 @@
+Laiba:-
+	AboutUs+results
+Moiz:-
+	Backend work+mainWorking
+Abdul Manan:-
+	Backend work+mainWorking
+Hammad:-
+	login+register+styling
+Husnain:-
+
+	login+register+styling
+

@@ -1,0 +1,153 @@
+.result-page {
+  padding: 1rem; /* kam padding */
+  background-color: rgb(78, 75, 75);
+  color: #f1f5f9;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.result-page h2 {
+  font-size: 1.5rem; /* chota heading */
+  margin-bottom: 1rem;
+  color: yellow;
+}
+
+.main-stats {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* kam gap */
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: #2e2e2e;
+  padding: 1rem; /* kam padding */
+  border-radius: 8px;
+  text-align: center;
+  min-width: 100px;
+  box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-card h3 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.9rem; /* chota font */
+  color: #ccc;
+}
+
+.stat-value {
+  font-size: 1.5rem; /* chota font */
+  font-weight: bold;
+  margin: 0;
+  color: white;
+}
+
+.char-breakdown {
+  width: 100%;
+  max-width: 500px; /* thoda narrow */
+  background-color: #2e2e2e;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.char-breakdown h3 {
+  text-align: center;
+  margin-top: 0;
+  font-size: 1rem; /* chota font */
+  color: #ccc;
+}
+
+.breakdown-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.breakdown-item {
+  padding: 0.5rem; /* kam padding */
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 0.9rem; /* chota font */
+}
+
+.breakdown-item.correct {
+  background-color: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.breakdown-item.incorrect {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.breakdown-item.extra {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+}
+
+.breakdown-item.missed {
+  background-color: rgba(156, 163, 175, 0.2);
+  color: #9ca3af;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.reset-btn, .history-btn {
+  padding: 0.5rem 1rem; /* chota padding */
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.reset-btn {
+  background-color: yellow;
+  color: #1e1e2f;
+}
+
+.reset-btn:hover {
+  background-color: #facc15;
+  transform: translateY(-1px);
+}
+
+.history-btn {
+  background-color: #3d3d3d;
+  color: white;
+}
+
+.history-btn:hover {
+  background-color: #555;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 600px) {
+  .main-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .breakdown-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .reset-btn, .history-btn {
+    width: 100%;
+  }
+}

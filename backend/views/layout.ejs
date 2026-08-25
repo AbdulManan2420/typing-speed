@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | TypeBolt</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="/">TypeBolt</a>
+      </div>
+      <div class="nav-links">
+        <% if (user) { %>
+          <a href="/users/dashboard">Dashboard</a>
+          <a href="/results/history">History</a>
+          <a href="/auth/logout">Logout</a>
+        <% } else { %>
+          <a href="/auth/login">Login</a>
+          <a href="/auth/register">Register</a>
+        <% } %>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>Made with ⚡ by Typing Enthusiasts</p>
+  </footer>
+</body>
+</html>

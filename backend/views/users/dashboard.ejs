@@ -1,0 +1,48 @@
+<% layout('layout') -%>
+
+<div class="dashboard">
+  <h2>Welcome, <%= user.username %></h2>
+  
+  <div class="stats">
+    <div class="stat-card">
+      <h3>Average WPM</h3>
+      <p><%= avgWPM || '--' %></p>
+    </div>
+    <div class="stat-card">
+      <h3>Average Accuracy</h3>
+      <p><%= avgAccuracy ? `${avgAccuracy}%` : '--' %></p>
+    </div>
+    <div class="stat-card">
+      <h3>Tests Taken</h3>
+      <p><%= testCount || 0 %></p>
+    </div>
+  </div>
+
+  <div class="recent-tests">
+    <h3>Recent Tests</h3>
+    <% if (results && results.length > 0) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>WPM</th>
+            <th>Accuracy</th>
+            <th>Mode</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% results.forEach(result => { %>
+            <tr>
+              <td><%= new Date(result.createdAt).toLocaleDateString() %></td>
+              <td><%= result.wpm %></td>
+              <td><%= result.accuracy %>%</td>
+              <td><%= result.mode %></td>
+            </tr>
+          <% }); %>
+        </tbody>
+      </table>
+    <% } else { %>
+      <p>No test results yet. Take a test to see your stats!</p>
+    <% } %>
+  </div>
+</div>

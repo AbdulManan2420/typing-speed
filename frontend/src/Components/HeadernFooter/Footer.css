@@ -1,0 +1,23 @@
+.bottom {
+    background-color: rgb(78, 75, 75);
+    padding: 15px 0;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer {
+    color: #cccccc;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+    user-select: none;
+    transition: color 0.3s ease;
+}
+
+.footer:hover {
+    color: yellow;
+}
